@@ -8,11 +8,7 @@ class TestController extends Controller
 {
     public function index()
     {
-        $name = 'Home';
-        $color = 'rgb(202, 185, 185)';
-        $description = 'This is a short description';
-
-        return view('welcome', compact('name', 'color', 'description'));
+        return view('welcome');
     }
 
     public function users()
