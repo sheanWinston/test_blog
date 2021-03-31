@@ -21,3 +21,6 @@ Route::get('/user/winston', 'TestController@users');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::view('/add-post', 'add_post')->name('add-post');
+Route::post('/add-post', 'PostController@upload')->name('upload-post');

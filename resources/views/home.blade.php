@@ -23,7 +23,8 @@
     </div>
     <!-- Traffic Source-->
     <div class="traffic-source-wrapper">
-      <div class="container">
+        <div class="container">
+          <a href="{{ route('add-post') }}"><button class="btn btn-primary mb-3">Add Post</button></a>
         <div class="d-flex align-items-center justify-content-between">
           <h6 class="mb-3 newsten-title">Traffic Source</h6>
           <p class="mb-3 line-height-1">Last 7 days</p>
