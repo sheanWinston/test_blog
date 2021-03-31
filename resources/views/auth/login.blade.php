@@ -23,10 +23,13 @@
       </div>
       <!-- Register Form-->
       <div class="register-form mt-5 px-3">
-        <form action="http://demo.designing-world.com/newsten-v1.0.0/home.html" method="post">
+          @foreach ($errors->all() as $err)
+                <p class="text-danger">{{ $err }}</p>
+          @endforeach
+        <form action="{{ route('login') }}" method="post">@csrf
           <div class="form-group text-left mb-4">
             <label for="username"><i class="lni lni-user"></i></label>
-            <input class="form-control" id="username" type="text" name="username" placeholder="Username or email">
+            <input class="form-control" id="username" type="email" name="email" placeholder="Email">
           </div>
           <div class="form-group text-left mb-4">
             <label for="password"><i class="lni lni-lock"></i></label>

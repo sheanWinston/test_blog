@@ -10,8 +10,8 @@
         <div class="user-meta-data d-flex align-items-center">
           <div class="user-thumbnail"><img src="img/bg-img/3.jpg" alt=""></div>
           <div class="user-content">
-            <h6>Lim Sarah</h6>
-            <p>Publisher</p>
+            <h6>{{ Auth::user()->name }}</h6>
+            <p>{{ Auth::user()->email }}</p>
             <div class="user-meta-data d-flex align-items-center justify-content-between">
               <p class="mx-1"><span class="counter">432</span><span>Articles</span></p>
               <p class="mx-1"><span class="counter">302</span><span>Followers</span></p>
