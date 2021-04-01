@@ -33,4 +33,29 @@ class PostController extends Controller
 
         return back()->with(['success' => 'Post uploaded']);
     }
+
+    public function view($title, $id)
+    {
+        $post = Post::find($id);
+
+        return view('edit_post', compact('post'));
+    }
+
+    public function update(Request $request, Post $post)
+    {
+        $data = $request->validate([
+            'title' => 'required|max:225|string',
+            'content' => 'required|max:225|string',
+            'category' => 'required|max:225|string',
+        ]);
+
+        $post->title = $request->title;
+        $post->content = $request->content;
+        $post->category = $request->category;
+        $post->save();
+
+        $post->update($data);
+
+        return back()->with(['success' => 'Post updated']);
+    }
 }

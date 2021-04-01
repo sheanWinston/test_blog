@@ -24,3 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('/add-post', 'add_post')->name('add-post');
 Route::post('/add-post', 'PostController@upload')->name('upload-post');
+
+Route::get('/post/{title}/{id}', 'PostController@view')->name('post.view');
+Route::put('/edit-post/{post}', 'PostController@update')->name('post.update');
